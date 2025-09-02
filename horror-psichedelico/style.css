@@ -1,0 +1,41 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: black;
+  color: #ff0055;
+  font-family: 'UnifrakturCook', cursive;
+  text-align: center;
+  overflow: hidden;
+}
+
+.background {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background: radial-gradient(circle, #111 0%, #000 100%);
+  animation: pulse 5s infinite;
+  z-index: -1;
+}
+
+@keyframes pulse {
+  0% { filter: hue-rotate(0deg); }
+  50% { filter: hue-rotate(180deg); }
+  100% { filter: hue-rotate(360deg); }
+}
+
+h1 {
+  font-size: 3em;
+  margin-top: 30vh;
+  animation: flicker 2s infinite;
+}
+
+@keyframes flicker {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+#message {
+  margin-top: 2em;
+  font-size: 1.5em;
+  color: #00ffcc;
+}
